@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yunus Taş — yazılım geliştirici, müzisyen ve indie oyun geliştiricisi">
+  <title>Yunus Taş — Kişisel Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#hakkinda">Yunus Taş</a>
+      <ul class="nav-links">
+        <li><a href="#hakkinda">Hakkımda</a></li>
+        <li><a href="#yetenekler">Yetenekler</a></li>
+        <li><a href="#projeler">Projeler</a></li>
+        <li><a href="#muzik">Müzik</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hakkinda" class="hero">
+      <div class="container hero-inner">
+        <figure class="avatar-frame">
+          <img src="profil.jpg" alt="Yunus Taş" onerror="this.style.display='none';document.getElementById('avatar-fallback').style.display='flex'">
+          <div id="avatar-fallback" class="avatar" style="display:none">YT</div>
+        </figure>
+        <div class="hero-text">
+          <h1>Merhaba, ben Yunus Taş.</h1>
+          <p class="tagline">Yazılım geliştirici, müzik yapımcısı ve indie oyun geliştiricisi.</p>
+          <p>
+            Yazılım yazmayı, müzik yapmayı ve oyun geliştirmeyi seviyorum.
+            ArchGate İndie Oyun Takımı'nda yer alıyorum. Sistem programlama,
+            yapay zeka ve açık kaynak üzerine çalışıyor; kendi Linux dağıtımım
+            ve dil modellerim gibi projeler geliştiriyorum.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#iletisim">İletişime Geç</a>
+            <a class="btn btn-secondary" href="#projeler">Projelerimi Gör</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="yetenekler" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Yetenekler</h2>
+        <div class="skills">
+          <span class="skill">C</span>
+          <span class="skill">C#</span>
+          <span class="skill">Rust</span>
+          <span class="skill">Python</span>
+          <span class="skill">Go</span>
+          <span class="skill">HTML</span>
+          <span class="skill">Java</span>
+          <span class="skill">Shell <em>(biraz)</em></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projeler" class="section">
+      <div class="container">
+        <h2 class="section-title">Projeler</h2>
+
+        <h3 class="cat-title">İşletim Sistemleri &amp; Düşük Seviye</h3>
+        <div class="grid">
+          <article class="card">
+            <h3>AkperOS</h3>
+            <p>Kendi Linux dağıtımım — CachyOS çekirdeği, KDE Plasma masaüstü, Calamares kurulumcu, Türkçe/İngilizce destek.</p>
+          </article>
+          <article class="card">
+            <h3>bootloader</h3>
+            <p>512 byte'lık, BIOS önyüklemeli x86 bootloader — menülü ve disket imajına yazılabilir.</p>
+          </article>
+          <article class="card">
+            <h3>yinit</h3>
+            <p>Linux için hafif init sistemi (PID 1). Servis yönetimi, bağımlılık çözümleme ve cgroup kaynak limitleri.</p>
+          </article>
+          <article class="card">
+            <h3>ris-supervisor</h3>
+            <p>Modüler init sistemi için servis süpervizörü; restart politikaları, loglama ve Unix soket kontrollü.</p>
+          </article>
+          <article class="card">
+            <h3>tabbar-wm</h3>
+            <p>Sekme tabanlı X11 tiling pencere yöneticisi — her pencere bir sekme, workspace'ler ve split modu.</p>
+          </article>
+          <article class="card">
+            <h3>aios</h3>
+            <p>İçine LLM gömülü özel bir Linux — llama.cpp ve Qwen modeli taşıyan bir "AI OS" denemesi.</p>
+          </article>
+        </div>
+
+        <h3 class="cat-title">Yapay Zeka</h3>
+        <div class="grid">
+          <article class="card">
+            <h3>Atlas AI</h3>
+            <p>Türkçe/kod odaklı LLM. Qwen2.5-Coder-3B tabanına QLoRA ile ince ayar, GGUF'a quantize ve Ollama'ya kurulum.</p>
+          </article>
+          <article class="card">
+            <h3>atlas-125m</h3>
+            <p>Sıfırdan eğitilmiş ~125M parametreli Türkçe dil modeli. Tokenizer'dan eğitime kadar her şey elde yapıldı.</p>
+          </article>
+          <article class="card">
+            <h3>turkce-ai</h3>
+            <p>Unsloth ile Llama-3.2-3B tabanlı Türkçe LLM QLoRA ince ayarı — 6GB VRAM'e optimize edilmiş.</p>
+          </article>
+          <article class="card">
+            <h3>KYLE</h3>
+            <p>Tamamen yerel AI sohbet asistanı. CLI + GUI, streaming yanıtlar, SQLite tabanlı vektör hafıza (RAG) ve kişilik profilleri.</p>
+          </article>
+        </div>
+
+        <h3 class="cat-title">Araçlar &amp; Uygulamalar</h3>
+        <div class="grid">
+          <article class="card">
+            <h3>Dosya Yöneticisi</h3>
+            <p>PySide6 ile Türkçe, kişiselleştirilebilir grafik dosya yöneticisi. Önizleme, sürükle-bırak, ZIP ve tema desteği.</p>
+          </article>
+          <article class="card">
+            <h3>pytrowser</h3>
+            <p>PyQt6 + QtWebEngine ile sekmeli web tarayıcı. Gizli gezinti ve koyu/açık tema modları.</p>
+          </article>
+          <article class="card">
+            <h3>ark</h3>
+            <p>Go ile yazılmış, her Linux dağıtımında çalışan evrensel paket yöneticisi CLI. SHA-256 doğrulamalı.</p>
+          </article>
+          <article class="card">
+            <h3>ark-registry</h3>
+            <p>ark için sunucusuz paket kayıt defteri ve GitHub Pages'te yayınlanan paket mağazası.</p>
+          </article>
+          <article class="card">
+            <h3>ark-web</h3>
+            <p>ark paket mağazasının tek sayfalık web arayüzü — arama, indirme ve kurulum komutları.</p>
+          </article>
+          <article class="card">
+            <h3>akper</h3>
+            <p>İnternetsiz çalışan yerel paket yöneticisi — .akpkg arşivleriyle paket kurulum, kaldırma ve güncelleme.</p>
+          </article>
+          <article class="card">
+            <h3>html-blok</h3>
+            <p>Tarayıcıda sürükle-bırak bloklarla HTML site oluşturan görsel web editörü.</p>
+          </article>
+          <article class="card">
+            <h3>AR Sword</h3>
+            <p>Webcam'den el takibi yapan artırılmış gerçeklik kılıç uygulaması (OpenCV + MediaPipe).</p>
+          </article>
+          <article class="card">
+            <h3>win11-debloat</h3>
+            <p>Windows 11'i gereksiz yazılımlardan arındıran debloat betikleri ve otomatik kurulum ISO'su altyapısı.</p>
+          </article>
+        </div>
+
+        <h3 class="cat-title">Oyunlar &amp; Modlar</h3>
+        <div class="grid">
+          <article class="card">
+            <h3>ArchGate</h3>
+            <p>İçinde yer aldığım indie oyun takımı — birlikte oyun geliştiriyoruz.</p>
+          </article>
+          <article class="card">
+            <h3>The Forgotten One</h3>
+            <p>Minecraft 1.20.1 için Fabric korku modu — oyuncuyu izleyen ve yazılar bırakan özel bir varlık.</p>
+          </article>
+          <article class="card">
+            <h3>The Hollow</h3>
+            <p>Karanlıkta oyuncuyu izleyen bir şey içeren "Broken Script" tarzı Minecraft korku modu.</p>
+          </article>
+          <article class="card">
+            <h3>Baldi Modları</h3>
+            <p>Baldi's Basics için mod koleksiyonu ve tek tıkla kurulum yapan mod yükleyici.</p>
+          </article>
+          <article class="card">
+            <h3>Platform Oyunu</h3>
+            <p>Godot 4.7 ile yapılmış platform oyunu — paralar, düşmanlar ve zıplama mekanikleri.</p>
+          </article>
+          <article class="card">
+            <h3>Temizlik Oyunu</h3>
+            <p>Unity 6 ile geliştirilen temizlik temalı oyun projesi.</p>
+          </article>
+          <article class="card">
+            <h3>Rust Öğretici</h3>
+            <p>Terminalde ders ve quiz içeren interaktif Rust öğrenme programı.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="muzik" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Müzik</h2>
+        <p class="contact-note">Yaptığım bazı parçaları buradan dinleyebilirsin.</p>
+        <ul class="track-list">
+          <li class="track">
+            <span class="track-name">An Ultrakill Remix</span>
+            <audio controls preload="none" src="muzik/Yunus TAS - An Ultrakill Remix.mp3"></audio>
+          </li>
+          <li class="track">
+            <span class="track-name">As Malicious As You</span>
+            <audio controls preload="none" src="muzik/Yunus TAS - As Malicious As You.mp3"></audio>
+          </li>
+          <li class="track">
+            <span class="track-name">A Thin Thing</span>
+            <audio controls preload="none" src="muzik/Yunus TAS - A Thin Thing.mp3"></audio>
+          </li>
+          <li class="track">
+            <span class="track-name">Revisiting the H E L L</span>
+            <audio controls preload="none" src="muzik/Yunus TAŞ - Revisiting the H E L L.mp3"></audio>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="iletisim" class="section">
+      <div class="container">
+        <h2 class="section-title">İletişim</h2>
+        <p class="contact-note">Bana ulaşmak istersen aşağıdaki kanallardan beni bulabilirsin.</p>
+        <div class="contact-links">
+          <a class="contact-item" href="mailto:yunustas1306x@gmail.com">✉️ E-posta</a>
+          <a class="contact-item" href="https://github.com/YunusTAS13" target="_blank" rel="noopener">GitHub</a>
+          <a class="contact-item" href="https://yunustas13.github.io" target="_blank" rel="noopener">Kişisel Site</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Yunus Taş</p>
+    </div>
+  </footer>
+</body>
+</html>
