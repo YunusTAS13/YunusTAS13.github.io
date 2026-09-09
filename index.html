@@ -6,13 +6,45 @@
   <meta name="theme-color" content="#0b0e13">
   <meta name="description" content="Yunus Taş — öğrenci geliştirici, müzik yapımcısı ve oyun geliştiricisi.">
   <title>Yunus Taş — yazılım, müzik ve oyun</title>
-  <link rel="stylesheet" href="style.css?v=1.2">
-  <script defer src="script.js?v=1.2"></script>
+  <link rel="stylesheet" href="style.css?v=1.3">
+  <script defer src="script.js?v=1.3"></script>
 </head>
 <body>
+  <div class="electricity" aria-hidden="true">
+    <svg viewBox="0 0 1200 1000" preserveAspectRatio="none">
+      <defs>
+        <filter id="bolt-glow" x="-60%" y="-20%" width="220%" height="140%">
+          <feGaussianBlur stdDeviation="3.5" result="blur"></feGaussianBlur>
+          <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+        </filter>
+        <linearGradient id="bolt-blue" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stop-color="#4b8dff"></stop>
+          <stop offset=".5" stop-color="#c2e0ff"></stop>
+          <stop offset="1" stop-color="#367cff"></stop>
+        </linearGradient>
+      </defs>
+      <g class="bolt bolt-left" filter="url(#bolt-glow)">
+        <path d="M35 -30 L78 80 L47 151 L122 230 L91 320 L180 393 L140 477 L249 548 L213 637 L300 700 L269 793 L360 865 L328 1040"></path>
+        <path d="M118 -20 L151 115 L113 188 L192 265 L165 349 L247 425 L211 509 L317 574 L285 668 L380 732"></path>
+      </g>
+      <g class="bolt bolt-right" filter="url(#bolt-glow)">
+        <path d="M1167 -25 L1124 88 L1157 164 L1081 241 L1110 331 L1024 401 L1060 493 L950 555 L987 639 L899 718 L930 801 L846 1040"></path>
+        <path d="M1084 -20 L1049 112 L1087 191 L1006 274 L1034 358 L957 434 L992 526 L885 600 L912 687 L820 765"></path>
+      </g>
+      <g class="bolt bolt-cross" filter="url(#bolt-glow)">
+        <path d="M2 410 L156 424 L254 398 L368 436 L497 418 L613 448 L742 419 L865 452 L1004 423 L1200 442"></path>
+        <path d="M0 666 L125 649 L245 682 L356 643 L491 676 L606 643 L743 675 L868 646 L1003 681 L1200 650"></path>
+      </g>
+      <g class="impact" filter="url(#bolt-glow)">
+        <path d="M600 437 L579 402 M600 437 L561 429 M600 437 L579 473 M600 437 L638 422 M600 437 L624 470"></path>
+        <path d="M306 650 L283 620 M306 650 L269 651 M306 650 L286 683 M306 650 L341 632"></path>
+        <path d="M894 650 L916 620 M894 650 L932 650 M894 650 L914 683 M894 650 L860 630"></path>
+      </g>
+    </svg>
+  </div>
   <header class="site-header">
     <a class="logo" href="#top" aria-label="Yunus Taş ana sayfa">YT<span>.</span></a>
-    <div class="header-status"><span class="status-dot"></span> İstanbul · öğrenci geliştirici</div>
+    <div class="header-status"><span class="status-dot"></span> Ankara · öğrenci geliştirici</div>
     <nav aria-label="Ana menü"><a href="#calismalar">Projeler</a><a href="#muzik">Müzik</a><a href="#iletisim">İletişim</a></nav>
     <a class="header-youtube" href="https://www.youtube.com/@YunusTA%C5%9E-d3k" target="_blank" rel="noopener">YouTube <span>↗</span></a>
   </header>
@@ -20,9 +52,9 @@
   <main id="top">
     <section class="hero page-width">
       <div class="hero-copy reveal-on-scroll">
-        <p class="eyebrow">Merhaba, ben Yunus / 01</p>
-        <h1>Lisede okuyup<br><em>kendi projelerimi</em><br>geliştiriyorum.</h1>
-        <p class="hero-text">Linux sistemleri, Türkçe programlama araçları, müzik ve oyunlarla uğraşan genç bir geliştiriciyim. Aklıma gelen fikirleri denemeyi seviyorum.</p>
+        <p class="eyebrow">Merhaba, ben Yunus / liseli bir geliştirici</p>
+        <h1>Mutlu olduğu<br><em>şeyleri yapmaya</em><br>çalışan birisi.</h1>
+        <p class="hero-text">Sistem programlama, yapay zekâ, müzik ve oyunlar arasında üretim yapmaya çalışan birisiyim.</p>
         <div class="hero-actions"><a class="button button-primary" href="#calismalar">Projelerime bak <span>↓</span></a><a class="button button-ghost" href="https://github.com/YunusTAS13" target="_blank" rel="noopener">GitHub <span>↗</span></a></div>
         <div class="quick-facts" aria-label="Kısa bilgiler"><div><b>01</b><span>C / Go / Python</span></div><div><b>02</b><span>Linux ve açık kaynak</span></div><div><b>03</b><span>Müzik ve oyun</span></div></div>
       </div>
