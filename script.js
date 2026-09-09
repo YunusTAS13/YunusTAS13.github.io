@@ -1,5 +1,13 @@
 document.documentElement.classList.add('js');
 
+const syncPageHeight = () => {
+  document.documentElement.style.setProperty('--page-height', `${document.body.scrollHeight}px`);
+};
+
+syncPageHeight();
+window.addEventListener('load', syncPageHeight);
+window.addEventListener('resize', syncPageHeight);
+
 const revealItems = document.querySelectorAll('.reveal-on-scroll');
 
 if ('IntersectionObserver' in window) {
