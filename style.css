@@ -15,14 +15,16 @@
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.55; overflow-x: hidden; position: relative; }
 body::before { background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px); background-size: 46px 46px; content: ''; inset: 0; pointer-events: none; position: fixed; z-index: -1; }
-.electricity { height: min(700px, calc(100vh - 74px)); mix-blend-mode: screen; opacity: .82; overflow: hidden; pointer-events: none; position: absolute; right: 0; top: 74px; width: min(720px, 56vw); z-index: 0; }
+.electricity { height: min(700px, calc(100vh - 74px)); mix-blend-mode: screen; opacity: .9; overflow: hidden; pointer-events: none; position: absolute; right: 0; top: 74px; width: min(720px, 56vw); z-index: 0; }
 .electricity svg { height: 100%; width: 100%; }
-.electricity path { fill: none; stroke: url(#bolt-blue); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.2; }
-.bolt path { animation: bolt-flow .72s linear infinite, electric-flicker .9s steps(2, end) infinite; stroke-dasharray: 72 18; }
-.bolt-b path { animation-delay: -.35s, -.52s; }
-.bolt-c path { animation-delay: -.58s, -.14s; }
-.bolt .core { filter: blur(.2px); stroke: #d5eaff; stroke-width: 1.15; }
-.impact { animation: impact-pulse .85s steps(2, end) infinite; opacity: 1; stroke: #c8e5ff; stroke-width: 2.6; }
+.electricity path { fill: none; stroke: #8fd0ff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3.2; }
+.bolt path { animation: strike-flash .68s steps(2, end) infinite; }
+.bolt-b path { animation-delay: -.28s; }
+.bolt-c path { animation-delay: -.51s; }
+.bolt .core { filter: blur(.15px); stroke: #f0f9ff; stroke-width: 1.45; }
+.impact { animation: impact-pulse .72s steps(2, end) infinite; opacity: 1; stroke: #dff3ff; stroke-width: 3.2; }
+.flash circle { animation: flash-burst .72s steps(2, end) infinite; fill: #f5fbff; opacity: .95; }
+.flash circle:nth-child(2) { animation-delay: -.33s; }
 .site-header, main, .site-footer { position: relative; z-index: 1; }
 a { color: inherit; text-decoration: none; }
 a:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; }
@@ -115,7 +117,7 @@ h1 em, h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; 
   .photo-note { right: -116px; width: 130px; }
   .photo-note::before { left: -55px; width: 50px; }
   .photo-note::after { left: -58px; }
-  .electricity { height: 620px; opacity: .65; width: 68vw; }
+  .electricity { height: 620px; opacity: .7; width: 68vw; }
   .team { grid-template-columns: 58px 1fr; }
   .team-copy { grid-column: 2; }
 }
@@ -126,7 +128,7 @@ h1 em, h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; 
   .site-header nav a, .header-youtube { font-size: .56rem; }
   .header-youtube { padding-left: 13px; }
   .hero { display: flex; flex-direction: column; gap: 65px; min-height: auto; padding-bottom: 80px; padding-top: 75px; }
-  .electricity { height: 520px; opacity: .48; top: 62px; width: 72vw; }
+  .electricity { height: 520px; opacity: .56; top: 62px; width: 72vw; }
   .hero h1 { font-size: clamp(3rem, 14vw, 4.5rem); }
   .hero-text { font-size: .88rem; }
   .quick-facts { gap: 18px; margin-top: 43px; }
@@ -153,7 +155,7 @@ h1 em, h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal-on-scroll { opacity: 1; transform: none; transition: none; }
-  .bolt, .bolt path, .bolt-cross path, .impact { animation: none; }
+  .bolt, .bolt path, .impact, .flash circle { animation: none; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
@@ -161,8 +163,13 @@ h1 em, h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; 
   0%, 14%, 18%, 43%, 48%, 100% { opacity: .17; }
   15%, 17%, 45%, 47% { opacity: .92; }
 }
-@keyframes bolt-flow {
-  to { stroke-dashoffset: -232px; }
+@keyframes strike-flash {
+  0%, 18%, 44%, 100% { opacity: .12; }
+  19%, 24%, 45%, 57% { opacity: 1; }
+}
+@keyframes flash-burst {
+  0%, 18%, 52%, 100% { opacity: .08; transform: scale(.35); transform-origin: center; }
+  20%, 35%, 54% { opacity: 1; transform: scale(1.45); }
 }
 @keyframes impact-pulse {
   0%, 100% { opacity: .18; transform: scale(.82); transform-origin: center; }

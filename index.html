@@ -6,16 +6,17 @@
   <meta name="theme-color" content="#0b0e13">
   <meta name="description" content="Yunus Taş — öğrenci geliştirici, müzik yapımcısı ve oyun geliştiricisi.">
   <title>Yunus Taş — yazılım, müzik ve oyun</title>
-  <link rel="stylesheet" href="style.css?v=1.3">
-  <script defer src="script.js?v=1.3"></script>
+  <link rel="stylesheet" href="style.css?v=1.4">
+  <script defer src="script.js?v=1.4"></script>
 </head>
 <body>
   <div class="electricity" aria-hidden="true">
     <svg viewBox="0 0 800 700" preserveAspectRatio="none">
       <defs>
-        <filter id="bolt-glow" x="-60%" y="-20%" width="220%" height="140%">
-          <feGaussianBlur stdDeviation="3.5" result="blur"></feGaussianBlur>
-          <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+        <filter id="bolt-glow" x="-60%" y="-80%" width="220%" height="260%">
+          <feGaussianBlur stdDeviation="8" result="wide-glow"></feGaussianBlur>
+          <feGaussianBlur stdDeviation="2.5" result="tight-glow"></feGaussianBlur>
+          <feMerge><feMergeNode in="wide-glow"></feMergeNode><feMergeNode in="tight-glow"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
         </filter>
         <linearGradient id="bolt-blue" x1="0" x2="1" y1="0" y2="1">
           <stop offset="0" stop-color="#4b8dff"></stop>
@@ -24,20 +25,26 @@
         </linearGradient>
       </defs>
       <g class="bolt bolt-a" filter="url(#bolt-glow)">
-        <path d="M805 -20 L746 46 L770 88 L696 141 L724 190 L640 239 L667 286 L580 337 L606 384 L520 440"></path>
-        <path class="core" d="M805 -20 L746 46 L770 88 L696 141 L724 190 L640 239 L667 286 L580 337 L606 384 L520 440"></path>
+        <path d="M820 265 L798 281 L779 274 L756 298 L735 288 L711 315 L686 306 L661 330 L638 320 L613 345 L588 335 L561 359 L535 350 L508 377 L483 368 L456 395 L427 385"></path>
+        <path class="core" d="M820 265 L798 281 L779 274 L756 298 L735 288 L711 315 L686 306 L661 330 L638 320 L613 345 L588 335 L561 359 L535 350 L508 377 L483 368 L456 395 L427 385"></path>
+        <path d="M661 330 L649 293 L633 276 L642 248 L625 224"></path>
+        <path d="M588 335 L598 370 L584 395 L597 428"></path>
       </g>
       <g class="bolt bolt-b" filter="url(#bolt-glow)">
-        <path d="M820 150 L756 208 L781 248 L704 296 L730 341 L648 389 L674 433 L585 486 L611 529 L525 583"></path>
-        <path class="core" d="M820 150 L756 208 L781 248 L704 296 L730 341 L648 389 L674 433 L585 486 L611 529 L525 583"></path>
+        <path d="M820 468 L797 451 L773 462 L747 438 L724 450 L701 425 L675 438 L650 414 L625 427 L598 405 L573 416 L546 394 L520 407 L494 386 L465 398 L439 378"></path>
+        <path class="core" d="M820 468 L797 451 L773 462 L747 438 L724 450 L701 425 L675 438 L650 414 L625 427 L598 405 L573 416 L546 394 L520 407 L494 386 L465 398 L439 378"></path>
+        <path d="M747 438 L752 475 L738 502 L750 530 L739 559"></path>
+        <path d="M625 427 L612 459 L620 486 L608 516"></path>
       </g>
       <g class="bolt bolt-c" filter="url(#bolt-glow)">
-        <path d="M810 415 L754 452 L777 490 L699 529 L722 567 L639 604 L660 640 L575 685"></path>
+        <path d="M820 594 L794 579 L770 592 L747 570 L721 582 L696 559 L672 571 L646 549 L619 561 L593 539 L567 551 L541 528 L515 540 L489 518 L461 530"></path>
       </g>
       <g class="impact" filter="url(#bolt-glow)">
-        <path d="M603 388 L575 350 M603 388 L556 378 M603 388 L575 428 M603 388 L646 366 M603 388 L638 426"></path>
-        <path d="M625 530 L603 502 M625 530 L590 530 M625 530 L605 561 M625 530 L659 511"></path>
+        <path d="M427 385 L404 355 M427 385 L390 381 M427 385 L407 420 M427 385 L457 360 M427 385 L460 414"></path>
+        <path d="M439 378 L421 347 M439 378 L405 370 M439 378 L420 410 M439 378 L469 354 M439 378 L472 405"></path>
+        <path d="M461 530 L439 501 M461 530 L425 528 M461 530 L441 561 M461 530 L493 509"></path>
       </g>
+      <g class="flash" filter="url(#bolt-glow)"><circle cx="427" cy="385" r="9"></circle><circle cx="461" cy="530" r="7"></circle></g>
     </svg>
   </div>
   <header class="site-header">
