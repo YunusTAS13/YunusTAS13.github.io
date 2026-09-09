@@ -3,97 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111111">
-  <meta name="description" content="Yunus Taş — yazılım geliştirici, müzik yapımcısı ve oyun geliştiricisi.">
-  <title>Yunus Taş — Kişisel site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#0b0e13">
+  <meta name="description" content="Yunus Taş — öğrenci geliştirici, müzik yapımcısı ve oyun geliştiricisi.">
+  <title>Yunus Taş — yazılım, müzik ve oyun</title>
+  <link rel="stylesheet" href="style.css?v=1.2">
+  <script defer src="script.js?v=1.2"></script>
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar">
-      <a class="wordmark" href="#top">YT<span>.</span></a>
-      <div class="side-profile">
-        <div class="side-avatar"><img src="profil.png" alt="Yunus Taş"></div>
-        <p>Yunus Taş</p>
-        <span>developer / musician</span>
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Yunus Taş ana sayfa">YT<span>.</span></a>
+    <div class="header-status"><span class="status-dot"></span> İstanbul · öğrenci geliştirici</div>
+    <nav aria-label="Ana menü"><a href="#calismalar">Projeler</a><a href="#muzik">Müzik</a><a href="#iletisim">İletişim</a></nav>
+    <a class="header-youtube" href="https://www.youtube.com/@YunusTA%C5%9E-d3k" target="_blank" rel="noopener">YouTube <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero page-width">
+      <div class="hero-copy reveal-on-scroll">
+        <p class="eyebrow">Merhaba, ben Yunus / 01</p>
+        <h1>Lisede okuyup<br><em>kendi projelerimi</em><br>geliştiriyorum.</h1>
+        <p class="hero-text">Linux sistemleri, Türkçe programlama araçları, müzik ve oyunlarla uğraşan genç bir geliştiriciyim. Aklıma gelen fikirleri denemeyi seviyorum.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#calismalar">Projelerime bak <span>↓</span></a><a class="button button-ghost" href="https://github.com/YunusTAS13" target="_blank" rel="noopener">GitHub <span>↗</span></a></div>
+        <div class="quick-facts" aria-label="Kısa bilgiler"><div><b>01</b><span>C / Go / Python</span></div><div><b>02</b><span>Linux ve açık kaynak</span></div><div><b>03</b><span>Müzik ve oyun</span></div></div>
       </div>
-      <nav class="side-nav" aria-label="Sayfa menüsü">
-        <a class="active" href="#top"><span>00</span> Giriş</a>
-        <a href="#projeler"><span>01</span> Projeler</a>
-        <a href="#muzik"><span>02</span> Müzik</a>
-        <a href="#iletisim"><span>03</span> İletişim</a>
-      </nav>
-      <div class="side-bottom">
-        <a href="https://github.com/YunusTAS13" target="_blank" rel="noopener">GitHub <b>↗</b></a>
-        <a href="mailto:yunustas1306x@gmail.com">E-posta <b>↗</b></a>
-        <small>© 2026 Yunus Taş</small>
+      <div class="hero-visual reveal-on-scroll">
+        <div class="photo-frame"><span class="photo-label">01 / portre</span><img src="profil.png" alt="Yunus Taş portresi"><div class="photo-caption"><span>Yunus Taş</span><span>2026</span></div></div>
+        <p class="photo-note">Aslında buna benziyor görünüşü. Maske ve gözlük taksa birebir aynı.</p>
       </div>
-    </aside>
+    </section>
 
-    <main id="top" class="content">
-      <section class="intro">
-        <div class="intro-copy">
-          <p class="kicker">Merhaba, ben Yunus.</p>
-          <h1>Bir şeyleri<br><i>çalışır hâle</i><br>getirmeyi seviyorum.</h1>
-          <p class="intro-text">Sistem programlama, yapay zekâ, müzik ve oyunlar arasında üretim yapan bağımsız bir geliştiriciyim.</p>
-          <div class="intro-actions">
-            <a class="button button-dark" href="#projeler">Çalışmalarım <span>↓</span></a>
-            <a class="button button-light" href="https://github.com/YunusTAS13" target="_blank" rel="noopener">GitHub <span>↗</span></a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <div class="image-index">/ 00 — portrait</div>
-          <img src="profil.png" alt="Yunus Taş portresi">
-          <div class="image-caption"><span>İstanbul, TR</span><span>2026</span></div>
-        </div>
-      </section>
+    <section class="now-bar page-width reveal-on-scroll"><span class="eyebrow">Şu anda</span><strong>yinit, ark ve birkaç küçük oyun fikri üzerinde çalışıyorum.</strong><a href="https://www.youtube.com/@YunusTA%C5%9E-d3k" target="_blank" rel="noopener">Kanalıma uğra <span>↗</span></a></section>
 
-      <div class="statement"><span>Şu anda</span><strong>Linux sistemleri, Türkçe araçlar ve bağımsız oyunlar üzerinde çalışıyorum.</strong></div>
+    <section id="calismalar" class="section page-width">
+      <div class="section-heading reveal-on-scroll"><div><p class="eyebrow">02 / çalışmalar</p><h2>Denediğim şeyler</h2></div><p>Hepsi GitHub’da açık kaynak olarak duruyor.</p></div>
+      <div class="project-grid">
+        <a class="project-card featured reveal-on-scroll" href="https://github.com/YunusTAS13/yinit" target="_blank" rel="noopener"><span class="project-number">01</span><div><h3>yinit</h3><p>Linux için hafif init sistemi ve servis yöneticisi.</p><small>C · Linux</small></div><span class="card-arrow">↗</span></a>
+        <a class="project-card featured reveal-on-scroll" href="https://github.com/YunusTAS13/TurkcePython" target="_blank" rel="noopener"><span class="project-number">02</span><div><h3>TürkçePython</h3><p>Türkçe sözdizimli Python yorumlayıcısı ve transpiler.</p><small>Python · Dil</small></div><span class="card-arrow">↗</span></a>
+        <a class="project-card reveal-on-scroll" href="https://github.com/YunusTAS13/EasyLinux" target="_blank" rel="noopener"><span class="project-number">03</span><div><h3>EasyLinux</h3><p>Linux’a yeni başlayanlar için çok dilli yardım uygulaması.</p><small>Go · Fyne</small></div><span class="card-arrow">↗</span></a>
+        <a class="project-card reveal-on-scroll" href="https://github.com/YunusTAS13/ris-supervisor" target="_blank" rel="noopener"><span class="project-number">04</span><div><h3>ris-supervisor</h3><p>RIS init sistemi için servis başlatıcı ve yönetici.</p><small>Python · Unix</small></div><span class="card-arrow">↗</span></a>
+        <a class="project-card reveal-on-scroll" href="https://github.com/YunusTAS13/ark-registry" target="_blank" rel="noopener"><span class="project-number">05</span><div><h3>ark</h3><p>.ark paketleri için dağıtımdan bağımsız paket yöneticisi.</p><small>Go · Package manager</small></div><span class="card-arrow">↗</span></a>
+        <a class="project-card reveal-on-scroll" href="https://github.com/YunusTAS13/nuve" target="_blank" rel="noopener"><span class="project-number">06</span><div><h3>nuve</h3><p>Türkçe sözdizimli programlama dili ve GUI kernel araştırması.</p><small>Language · GUI</small></div><span class="card-arrow">↗</span></a>
+        <a class="project-card reveal-on-scroll" href="https://github.com/YunusTAS13/mod-studio" target="_blank" rel="noopener"><span class="project-number">07</span><div><h3>Mod Studio</h3><p>Kod yazmadan Minecraft Fabric modu hazırlama aracı.</p><small>Tauri · Svelte</small></div><span class="card-arrow">↗</span></a>
+        <a class="project-card reveal-on-scroll" href="https://github.com/YunusTAS13/UnityExtractor" target="_blank" rel="noopener"><span class="project-number">08</span><div><h3>UnityExtractor</h3><p>Unity oyunlarından varlık çıkarmayı deneyen araç.</p><small>Game tools</small></div><span class="card-arrow">↗</span></a>
+        <a class="project-card reveal-on-scroll" href="https://github.com/YunusTAS13/Dosya_Yoneticisi" target="_blank" rel="noopener"><span class="project-number">09</span><div><h3>Dosya Yöneticisi</h3><p>Türkçe, kişiselleştirilebilir grafik dosya yöneticisi.</p><small>Python · PySide6</small></div><span class="card-arrow">↗</span></a>
+        <a class="project-card reveal-on-scroll" href="https://github.com/YunusTAS13/GPU-Yoneticisi" target="_blank" rel="noopener"><span class="project-number">10</span><div><h3>GPU Yöneticisi</h3><p>Linux’ta grafik modlarını otomatik yönetmeye yardımcı araç.</p><small>Linux · GPLv3</small></div><span class="card-arrow">↗</span></a>
+      </div>
+      <a class="all-projects reveal-on-scroll" href="https://github.com/YunusTAS13?tab=repositories" target="_blank" rel="noopener">GitHub’da tüm projeler <span>↗</span></a>
+    </section>
 
-      <section id="projeler" class="block">
-        <div class="block-heading"><p class="section-number">01 / seçilmiş projeler</p><p class="muted">GitHub’da daha fazlası var <a href="https://github.com/YunusTAS13?tab=repositories" target="_blank" rel="noopener">↗</a></p></div>
-        <div class="project-list">
-          <a class="project-row" href="https://github.com/YunusTAS13/yinit" target="_blank" rel="noopener">
-            <span class="project-no">01</span><div><h2>yinit</h2><p>Linux için hafif init sistemi ve servis yöneticisi.</p></div><span class="project-meta">C · Linux</span><span class="row-arrow">↗</span>
-          </a>
-          <a class="project-row" href="https://github.com/YunusTAS13/TurkcePython" target="_blank" rel="noopener">
-            <span class="project-no">02</span><div><h2>TürkçePython</h2><p>Türkçe sözdizimli Python yorumlayıcısı.</p></div><span class="project-meta">Python · Dil</span><span class="row-arrow">↗</span>
-          </a>
-          <a class="project-row" href="https://github.com/YunusTAS13/EasyLinux" target="_blank" rel="noopener">
-            <span class="project-no">03</span><div><h2>EasyLinux</h2><p>Linux’a yeni başlayanlar için masaüstü yardım merkezi.</p></div><span class="project-meta">Go · Fyne</span><span class="row-arrow">↗</span>
-          </a>
-          <a class="project-row" href="https://github.com/YunusTAS13/ris-supervisor" target="_blank" rel="noopener">
-            <span class="project-no">04</span><div><h2>ris-supervisor</h2><p>RIS için servis süpervizörü, restart ve loglama araçları.</p></div><span class="project-meta">Python · Unix</span><span class="row-arrow">↗</span>
-          </a>
-          <a class="project-row" href="https://github.com/YunusTAS13/ark-registry" target="_blank" rel="noopener">
-            <span class="project-no">05</span><div><h2>ark</h2><p>Dağıtımdan bağımsız Linux paket yöneticisi.</p></div><span class="project-meta">Go · .ark</span><span class="row-arrow">↗</span>
-          </a>
-        </div>
-      </section>
+    <section class="team page-width reveal-on-scroll"><div class="team-mark">AG</div><div><p class="eyebrow">ArchGate Indie Team</p><h2>Oyun geliştiren<br><em>küçük bir ekip.</em></h2></div><div class="team-copy"><p>Arkadaşlarla oyun fikirlerini denediğimiz, prototipler yaptığımız bağımsız ekip.</p><div><a class="text-link" href="https://archgateindieteam.netlify.app" target="_blank" rel="noopener">Web sitesine git <span>↗</span></a><a class="text-link" href="https://github.com/YunusTAS13/archgate-indie-team" target="_blank" rel="noopener">GitHub <span>↗</span></a></div></div></section>
 
-      <section class="archgate">
-        <div class="archgate-mark">AG</div>
-        <div><p class="section-number">ArchGate Indie Team</p><h2>Oyunları yalnızca<br><i>oynamıyoruz.</i></h2></div>
-        <div class="archgate-right"><p>Bağımsız oyun takımımızda fikirleri, atmosferleri ve hikâyeleri oynanabilir dünyalara dönüştürüyoruz.</p><a class="under-link" href="https://archgateindieteam.netlify.app" target="_blank" rel="noopener">Takımı keşfet <span>↗</span></a><a class="under-link" href="https://github.com/YunusTAS13/archgate-indie-team" target="_blank" rel="noopener">GitHub <span>↗</span></a></div>
-      </section>
+    <section id="muzik" class="section page-width music-section">
+      <div class="section-heading reveal-on-scroll"><div><p class="eyebrow">03 / müzik</p><h2>Dinlemek istersen</h2></div><p>Buradan doğrudan dinleyebilirsin.</p></div>
+      <div class="music-list">
+        <article class="music-row reveal-on-scroll"><span class="music-number">01</span><div><h3>That’s All My Fault</h3><small>original</small></div><audio controls controlslist="nodownload noplaybackrate" disablepictureinpicture preload="none" src="muzik/Yunus TAŞ - That's All My Fault.mp3" aria-label="That's All My Fault"></audio></article>
+        <article class="music-row reveal-on-scroll"><span class="music-number">02</span><div><h3>Risen remix</h3><small>remix</small></div><audio controls controlslist="nodownload noplaybackrate" disablepictureinpicture preload="none" src="muzik/Yunus TAŞ - Risen remix.mp3" aria-label="Risen remix"></audio></article>
+        <article class="music-row reveal-on-scroll"><span class="music-number">03</span><div><h3>Revisiting the H E L L</h3><small>original</small></div><audio controls controlslist="nodownload noplaybackrate" disablepictureinpicture preload="none" src="muzik/Yunus TAŞ - Revisiting the H E L L.mp3" aria-label="Revisiting the H E L L"></audio></article>
+        <article class="music-row reveal-on-scroll"><span class="music-number">04</span><div><h3>An Ultrakill Remix</h3><small>fan-made remix</small></div><audio controls controlslist="nodownload noplaybackrate" disablepictureinpicture preload="none" src="muzik/Yunus TAS - An Ultrakill Remix.mp3" aria-label="An Ultrakill Remix"></audio></article>
+      </div>
+    </section>
 
-      <section id="muzik" class="block music-block">
-        <div class="block-heading"><p class="section-number">02 / müzik</p><p class="muted">Koddan kalan zamanlarda</p></div>
-        <div class="music-list">
-          <article class="music-row"><span class="music-no">01</span><div class="music-title"><strong>That’s All My Fault</strong><small>original</small></div><audio controls preload="none" src="muzik/Yunus TAŞ - That's All My Fault.mp3" aria-label="That's All My Fault"></audio></article>
-          <article class="music-row"><span class="music-no">02</span><div class="music-title"><strong>Risen remix</strong><small>remix</small></div><audio controls preload="none" src="muzik/Yunus TAŞ - Risen remix.mp3" aria-label="Risen remix"></audio></article>
-          <article class="music-row"><span class="music-no">03</span><div class="music-title"><strong>Revisiting the H E L L</strong><small>soundtrack</small></div><audio controls preload="none" src="muzik/Yunus TAŞ - Revisiting the H E L L.mp3" aria-label="Revisiting the H E L L"></audio></article>
-          <article class="music-row"><span class="music-no">04</span><div class="music-title"><strong>An Ultrakill Remix</strong><small>remix</small></div><audio controls preload="none" src="muzik/Yunus TAS - An Ultrakill Remix.mp3" aria-label="An Ultrakill Remix"></audio></article>
-        </div>
-      </section>
-
-      <section id="iletisim" class="contact">
-        <p class="section-number">03 / iletişim</p>
-        <h2>Bir fikrin varsa<br><i>ses ver.</i></h2>
-        <p>Proje, oyun, müzik veya sadece merhaba demek için:</p>
-        <a class="contact-mail" href="mailto:yunustas1306x@gmail.com">yunustas1306x@gmail.com <span>↗</span></a>
-      </section>
-    </main>
-  </div>
+    <section id="iletisim" class="contact page-width reveal-on-scroll"><p class="eyebrow">04 / iletişim</p><h2>Bir şey yapmak<br><em>ister misin?</em></h2><p>Proje, oyun, müzik veya sadece merhaba demek için yazabilirsin.</p><div class="contact-links"><a class="contact-mail" href="mailto:yunustas1306x@gmail.com">yunustas1306x@gmail.com <span>↗</span></a><a class="contact-youtube" href="https://www.youtube.com/@YunusTA%C5%9E-d3k" target="_blank" rel="noopener">YouTube kanalı <span>↗</span></a></div></section>
+  </main>
+  <footer class="page-width site-footer"><span>YT. / Yunus Taş</span><span>© 2026</span></footer>
 </body>
 </html>
