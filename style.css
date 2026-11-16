@@ -13,6 +13,8 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+::selection { background: var(--blue); color: #07101d; }
+html { scrollbar-color: #2a3444 var(--bg); scrollbar-width: thin; }
 body { background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.55; overflow-x: hidden; position: relative; }
 body::before { background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px); background-size: 46px 46px; content: ''; inset: 0; pointer-events: none; position: fixed; z-index: -1; }
 .site-header, main, .site-footer { position: relative; }
@@ -25,7 +27,9 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; }
 .header-status { color: var(--muted); font-family: var(--mono); font-size: .62rem; margin-right: auto; }
 .status-dot { background: #69d49a; border-radius: 50%; box-shadow: 0 0 0 4px rgba(105,212,154,.1); display: inline-block; height: 6px; margin-right: 7px; width: 6px; }
 .site-header nav { display: flex; gap: 22px; }
-.site-header nav a, .header-youtube { color: var(--muted); font-family: var(--mono); font-size: .63rem; transition: color .2s; }
+.site-header nav a, .header-youtube { color: var(--muted); font-family: var(--mono); font-size: .63rem; position: relative; transition: color .2s; }
+.site-header nav a::after { background: var(--blue); bottom: -6px; content: ''; height: 1px; left: 0; position: absolute; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; width: 100%; }
+.site-header nav a:hover::after { transform: scaleX(1); }
 .site-header nav a:hover, .header-youtube:hover { color: var(--text); }
 .header-youtube { border-left: 1px solid var(--line); padding-left: 24px; }
 .hero { align-items: center; display: grid; gap: clamp(45px, 7vw, 105px); grid-template-columns: minmax(0, 1fr) minmax(330px, .83fr); min-height: 700px; padding-bottom: 92px; padding-top: 92px; }
@@ -47,7 +51,9 @@ h1 em, h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; 
 .hero-visual { justify-self: end; max-width: 475px; position: relative; width: 100%; }
 .photo-frame { background: var(--panel); border: 1px solid rgba(108,174,255,.42); padding: 12px; position: relative; transform: rotate(1.2deg); }
 .photo-frame::before { border: 1px solid var(--line); content: ''; inset: 7px -9px -9px 7px; position: absolute; transform: rotate(-2.5deg); z-index: -1; }
-.photo-frame img { display: block; filter: grayscale(1) contrast(1.08); height: auto; width: 100%; }
+.photo-frame img { display: block; filter: grayscale(1) contrast(1.08) sepia(.14); height: auto; width: 100%; }
+.photo-frame:hover { transform: rotate(0deg); }
+.photo-frame { transition: transform .45s ease; }
 .photo-label { display: block; padding: 2px 0 11px; }
 .photo-caption { display: flex; justify-content: space-between; padding: 11px 0 1px; }
 .photo-note { color: var(--muted); font-family: var(--mono); font-size: .62rem; line-height: 1.55; position: absolute; right: -145px; top: 45%; transform: rotate(-3deg); width: 155px; }
@@ -69,7 +75,8 @@ h1 em, h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; 
 .project-card h3 { font-size: 1.18rem; letter-spacing: -.05em; }
 .project-card p { color: var(--muted); font-size: .75rem; line-height: 1.5; margin: 7px 0 17px; max-width: 390px; }
 .project-card small { display: block; }
-.card-arrow { font-size: 1rem; }
+.card-arrow { font-size: 1rem; transition: transform .25s ease; }
+.project-card:hover .card-arrow { transform: translate(4px, -4px); }
 .all-projects { border-bottom: 1px solid var(--blue); display: inline-block; font-family: var(--mono); font-size: .63rem; margin-top: 26px; padding-bottom: 6px; }
 .all-projects:hover { color: var(--blue); }
 .team { align-items: center; background: var(--blue); color: #07101d; display: grid; gap: 35px; grid-template-columns: 70px 1fr 1fr; margin-top: 80px; padding-bottom: 68px; padding-top: 68px; }
@@ -87,7 +94,7 @@ h1 em, h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; 
 /* ---- özel müzik çalar ---- */
 .player { background: rgba(17,23,34,.82); border: 1px solid var(--line); padding: clamp(18px, 3vw, 30px); }
 .player-now { align-items: center; display: flex; flex-wrap: wrap; gap: 20px; }
-.player-disc { animation: disc-spin 7s linear infinite; animation-play-state: paused; background: conic-gradient(from 0deg, #1c2635, #0d1219 25%, #1c2635 50%, #0d1219 75%, #1c2635); border: 1px solid var(--line); border-radius: 50%; flex-shrink: 0; height: 74px; position: relative; width: 74px; }
+.player-disc { animation: disc-spin 7s linear infinite; animation-play-state: paused; background: conic-gradient(from 0deg, #1c2635, #0d1219 25%, #1c2635 50%, #0d1219 75%, #1c2635); border: 1px solid var(--line); border-radius: 50%; box-shadow: 0 6px 22px rgba(0,0,0,.45); flex-shrink: 0; height: 74px; position: relative; width: 74px; }
 .player.is-playing .player-disc { animation-play-state: running; }
 .player-disc-hole { background: var(--blue); border-radius: 50%; height: 12px; left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%); width: 12px; }
 @keyframes disc-spin { to { transform: rotate(360deg); } }
@@ -134,7 +141,8 @@ h1 em, h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; 
 .contact-location small { color: var(--blue); font-family: var(--mono); font-size: .59rem; }
 .contact-location p { color: var(--text); font-size: .76rem; line-height: 1.55; margin-top: 5px; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 26px; }
-.contact-mail, .contact-youtube { border-bottom: 1px solid var(--blue); display: inline-block; font-family: var(--mono); font-size: .7rem; margin-top: 27px; padding-bottom: 7px; }
+.contact-mail, .contact-youtube { border-bottom: 1px solid var(--blue); display: inline-block; font-family: var(--mono); font-size: .7rem; margin-top: 27px; padding-bottom: 7px; transition: color .2s; }
+.contact-mail:hover, .contact-youtube:hover { color: var(--blue); }
 .contact-mail span, .contact-youtube span { margin-left: 10px; }
 .site-footer { border-top: 1px solid var(--line); color: var(--muted); display: flex; font-family: var(--mono); font-size: .58rem; justify-content: space-between; padding-bottom: 23px; padding-top: 23px; }
 .reveal-on-scroll { opacity: 1; }
